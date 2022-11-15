@@ -56,6 +56,7 @@ test = [
     "build",
     "cattrs >=22.2.0",
     "distlib",
+    "numpy"
     "pathspec",
     "pybind11",
     "pyproject-metadata",
@@ -119,6 +120,7 @@ testpaths = ["tests"]
 markers = [
     "compile: Compiles code",
     "configure: Configures CMake code",
+    "fortran: Fortran code",
     "integration: Full package build",
 ]
 
@@ -150,7 +152,7 @@ module = ["scikit_build_core.*"]
 disallow_untyped_defs = true
 
 [[tool.mypy.overrides]]
-module = ["distlib.*", "pathspec"]
+module = ["distlib.*", "pathspec", "numpy"]
 ignore_missing_imports = true
 
 
