@@ -13,8 +13,7 @@ from packaging.version import Version
 
 from ._logging import logger
 from ._shutil import Run
-from .errors import (CMakeConfigError, CMakeNotFoundError,
-                     FailedLiveProcessError)
+from .errors import CMakeConfigError, CMakeNotFoundError, FailedLiveProcessError
 from .program_search import best_program, get_cmake_programs
 
 __all__ = ["CMake", "CMaker"]

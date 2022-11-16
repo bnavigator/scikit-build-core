@@ -10,11 +10,12 @@ import pytest
 
 from scikit_build_core.builder.builder import Builder
 from scikit_build_core.builder.macos import get_macosx_deployment_target
-from scikit_build_core.builder.sysconfig import (get_python_include_dir,
-                                                 get_python_library)
+from scikit_build_core.builder.sysconfig import (
+    get_python_include_dir,
+    get_python_library,
+)
 from scikit_build_core.builder.wheel_tag import WheelTag
-from scikit_build_core.settings.skbuild_model import (ScikitBuildSettings,
-                                                      WheelSettings)
+from scikit_build_core.settings.skbuild_model import ScikitBuildSettings, WheelSettings
 
 
 # The envvar_higher case shouldn't happen, but the compiler should cause the

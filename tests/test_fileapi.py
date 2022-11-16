@@ -6,8 +6,9 @@ import pytest
 from packaging.version import Version
 
 from scikit_build_core.cmake import CMake, CMaker
-from scikit_build_core.file_api._cattrs_converter import \
-    load_reply_dir as load_reply_dir_cattrs
+from scikit_build_core.file_api._cattrs_converter import (
+    load_reply_dir as load_reply_dir_cattrs,
+)
 from scikit_build_core.file_api.query import stateless_query
 from scikit_build_core.file_api.reply import load_reply_dir
 

@@ -13,8 +13,7 @@ from .. import __version__
 from ..builder.sysconfig import get_python_include_dir, get_python_library
 from ..cmake import CMaker
 from ..errors import NinjaNotFoundError
-from ..program_search import (best_program, get_make_programs,
-                              get_ninja_programs)
+from ..program_search import best_program, get_make_programs, get_ninja_programs
 from ..resources import find_python
 from ..settings.skbuild_model import ScikitBuildSettings
 
