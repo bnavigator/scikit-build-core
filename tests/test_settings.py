@@ -4,12 +4,8 @@ from typing import Dict, List, Optional, Union
 
 import pytest
 
-from scikit_build_core.settings.sources import (
-    ConfSource,
-    EnvSource,
-    SourceChain,
-    TOMLSource,
-)
+from scikit_build_core.settings.sources import (ConfSource, EnvSource,
+                                                SourceChain, TOMLSource)
 
 
 @dataclasses.dataclass

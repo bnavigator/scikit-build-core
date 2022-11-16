@@ -7,11 +7,8 @@ from pathlib import Path
 import pytest
 from packaging.version import Version
 
-from scikit_build_core.program_search import (
-    best_program,
-    get_cmake_programs,
-    get_ninja_programs,
-)
+from scikit_build_core.program_search import (best_program, get_cmake_programs,
+                                              get_ninja_programs)
 
 
 def test_get_cmake_programs_cmake_module(monkeypatch):

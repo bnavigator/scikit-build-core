@@ -10,12 +10,8 @@ from packaging.version import Version
 
 from .._compat import tomllib
 from .._compat.typing import Literal
-from ..program_search import (
-    best_program,
-    get_cmake_programs,
-    get_make_programs,
-    get_ninja_programs,
-)
+from ..program_search import (best_program, get_cmake_programs,
+                              get_make_programs, get_ninja_programs)
 from ..resources import resources
 from ..settings.skbuild_read_settings import SettingsReader
 

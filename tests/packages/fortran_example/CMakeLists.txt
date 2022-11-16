@@ -35,8 +35,9 @@ add_custom_command(
   DEPENDS fib1.f # Fortran source
 )
 
-python_add_library(${CMAKE_PROJECT_NAME} MODULE WITH_SOABI "${f2py_module_name}module.c"
-                   "${F2PY_INCLUDE_DIR}/fortranobject.c" "${fortran_src_file}")
+python_add_library(
+  ${CMAKE_PROJECT_NAME} MODULE WITH_SOABI "${f2py_module_name}module.c"
+  "${F2PY_INCLUDE_DIR}/fortranobject.c" "${fortran_src_file}")
 
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC ${F2PY_INCLUDE_DIR})
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC Python::NumPy)
