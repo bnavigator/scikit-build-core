@@ -16,7 +16,7 @@ DIR = Path(__file__).parent.resolve()
 
 
 @functools.lru_cache(1)
-def cmake_path() -> str:
+def cmake_path() -> Path:
     try:
         import cmake
     except ModuleNotFoundError:
@@ -24,14 +24,14 @@ def cmake_path() -> str:
         print(cmake_str)
         if cmake_str is None:
             pytest.skip("cmake must be installed for this test")
-        return os.fspath(Path(cmake_str).resolve())
+        return Path(cmake_str).resolve()
 
-    return os.fspath(Path(cmake.CMAKE_BIN_DIR) / "cmake")
+    return Path(cmake.CMAKE_BIN_DIR) / "cmake"
 
 
 def configure_args(config: CMaker, *, init: bool = False) -> Generator[str, None, None]:
 
-    yield cmake_path()
+    yield os.fspath(cmake_path())
     yield f"-S{config.source_dir}"
     yield f"-B{config.build_dir}"
 
